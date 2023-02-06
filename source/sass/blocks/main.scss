@@ -1,0 +1,21 @@
+._main {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+@media (min-width: $tablet-width) {
+    ._main {
+        width: 92%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}  
+
+@media (min-width: $desktop-width) {
+    ._main {
+        width: 1147px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }      
+}    

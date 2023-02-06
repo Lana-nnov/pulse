@@ -1,0 +1,171 @@
+._services {
+    padding-top: 10px;
+    margin-bottom: 50px;    
+}
+
+._services {
+    display: flex;
+    flex-direction: column;
+}
+
+._services__title {
+    position: relative;
+    padding-left: 25px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);  
+        width: 13px;
+        height: 13px;
+        background-color: #f98900;
+        border-radius: 50%;
+    }
+}
+
+._services__block-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 38px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+._services__wrap {
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        background-image: linear-gradient(60.0deg, #00cbfe 7%, #004cb3 92%);
+        border-radius: 10px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 44px;       
+        left: 30px;     
+        transform: translate(-50%, -50%);  
+    }
+}
+
+._services__wrap--installation {
+    &::after {             
+        width: 54px;
+        height: 54px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/icon-montazh.png");
+    }
+}
+
+._services__wrap--dismantling {
+    &::after {
+        width: 56px;
+        height: 56px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/icon-demontazh.png");
+    }
+}
+
+._services__list {
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+._services__item {
+    margin-bottom: 6px;
+}
+
+._services__text {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: $tablet-width) {
+    ._services {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }   
+
+    ._services__wrap {
+        width: 48%;
+        padding-left: 90px;
+        box-sizing: border-box;
+
+        &::before {
+            width: 70px;       
+            height: 70px;     
+        }
+
+        &::after {
+            top: 50px;       
+            left: 35px;     
+        }
+
+        &:nth-child(2n+1) {
+            padding-right: 18px;
+        }
+    }
+
+    ._services__title {
+       width: 100%;
+       text-align: left;
+       font-size: 26px;
+       line-height: 28px;
+    }   
+
+    ._services__block-title {
+        text-align: left;
+    }    
+      
+}    
+
+@media (min-width: $tablet-width) {
+    ._services__block-title {
+        margin-bottom: 12px;
+    }    
+
+    ._services__list {
+        margin-left: -10px;
+    }
+}    
+
+@media (min-width: $desktop-width) {
+    ._services__wrap {
+        padding-left: 110px;
+
+        &::before {
+            width: 90px;       
+            height: 90px;  
+        }
+          
+
+        &::after {
+            top: 60px;       
+            left: 45px;     
+        }
+    } 
+}    

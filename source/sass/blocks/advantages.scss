@@ -1,0 +1,199 @@
+._advantages__title {
+    position: relative;
+    padding-left: 25px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 50px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);  
+        width: 13px;
+        height: 13px;
+        background-color: #f98900;
+        border-radius: 50%;
+    }    
+}
+
+._advantages__list, ._advantages__list-add {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+._advantages__item {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);        
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+}
+
+._advantages__item--first {
+    &::before {
+        width: 239px;
+        height: 130px;
+        background-image: url("../img/item-3000.png");
+    }
+}    
+
+._advantages__item--second {
+    &::before {
+        top: 10px;
+        width: 229px;
+        height: 120px;
+        background-image: url("../img/item-2500.png");
+    }
+}   
+
+._advantages__item--third {
+    &::before {
+        top: 10px;
+        width: 110px;
+        height: 115px;
+        background-image: url("../img/item-1.png");
+    }
+}   
+
+._advantages__item span {    
+    display: block;
+    margin-bottom: 128px;    
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+    font-weight: normal;
+}
+
+._advantages__item-add {
+    position: relative;
+    padding-left: 80px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -13px;
+        left: 0;
+        width: 60px;
+        height: 60px;        
+        background-color: #f2f2f2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55px;
+        height: 55px;        
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+._advantages__item-add--first {
+    &::after {
+        background-image: url("../img/icon-fast.png");
+    }
+}
+
+._advantages__item-add--second {
+    &::after {
+        background-image: url("../img/icon-options.png");
+    }
+}
+
+._advantages__item-add--third {
+    &::after {
+        background-image: url("../img/icon-time.png");
+    }
+}
+
+._advantages__item-add--forth {
+    &::after {
+        background-image: url("../img/icon-moving.png");
+    }
+}
+
+@media (min-width: $tablet-width) {
+    ._advantages__list, ._advantages__list-add {
+        flex-direction: row;
+        margin-bottom: 40px;
+    }    
+
+    ._advantages__item {     
+        width: 32%;
+        box-sizing: border-box;
+    }   
+
+    ._advantages__title {
+        font-size: 26px;
+        line-height: 28px;
+        text-align: left;
+    }  
+    
+    ._advantages__item-add {
+        width: 45%;
+        padding-left: 100px;
+        text-align: left;
+
+        &::before {            
+            width: 80px;
+            height: 80px;     
+        }
+
+        &::after {
+            top: 10px;
+            left: 10px;
+        }
+    }    
+}    
+
+@media (min-width: $desktop-width) {
+
+    ._advantages__item-add {
+        width: 23%;
+        padding-left: 115px;
+        box-sizing: border-box;
+
+        &::before {            
+            width: 100px;
+            height: 100px;     
+        }
+
+        &::after {
+            top: 50%;
+            left: 20px;
+            transform: translate(0, -50%);
+        }
+    }   
+}    
